@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('apply/', include('apply.urls')),
     path('bonus/', include('bonus.urls')),
+    path('store/', include('bonus.urls')),
 ]
 
 # for loading static files

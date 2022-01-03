@@ -10,7 +10,8 @@ from django.contrib.auth.models import User
 
 def welcome(request):
     if request.user.is_authenticated:
-        return redirect("/apply/myapply")
+        # return redirect("/apply/myapply")
+        return render(request, "apply/welcome.html")
     else:    
         return render(request, "apply/welcome.html")
 
@@ -105,3 +106,16 @@ def update_apply(request, id):
     context = {'form':form} 
  
     return render(request, "apply/update_apply.html", context)
+
+
+def north(request):
+        return render(request, "apply/north.html")
+
+def mid(request):
+        return render(request, "apply/mid.html")
+
+def south(request):
+        return render(request, "apply/south.html")
+
+def east(request):
+        return render(request, "apply/east.html")

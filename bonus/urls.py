@@ -25,3 +25,8 @@ urlpatterns = [
     path('prizes/<int:pk>', views.PrizeDetailView.as_view(), name='prize-detail'),
 ]
 
+urlpatterns += [
+    path('create/', views.create, name='create'),
+    path('comment/', views.comment, name='comment'),
+]
+

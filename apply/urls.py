@@ -29,3 +29,10 @@ urlpatterns += [
 urlpatterns += [
     path('updateapply/<int:id>', views.update_apply),
 ]
+
+urlpatterns += [
+    path('north/', views.north, name='north'),
+    path('mid/', views.mid, name='mid'),
+    path('south/', views.south, name='south'),
+    path('east/', views.east, name='east'),
+]

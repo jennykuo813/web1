@@ -6,10 +6,13 @@ from django.http import HttpResponse
 from .models import Prize, Winner
 
 def how(request):
-    return render(
-        request,
-        'bonus/how.html',
-    )
+    return render(request, 'bonus/how.html')
+
+def create(request):
+        return render(request, "store/create.html")
+    
+def comment(request):
+        return render(request, "store/comment.html")
 
 def index(request):
     prizeList = Prize.objects.all()
